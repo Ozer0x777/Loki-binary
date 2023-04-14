@@ -1,4 +1,0 @@
-netaddr
-psutil
-pylzma
-yara-python
