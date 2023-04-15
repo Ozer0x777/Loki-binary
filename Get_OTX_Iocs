@@ -13,7 +13,7 @@
 # 22.11.2017 - Scott Carpenter uberbigun@gmail.com
 # 13.02.2018 - Reworked the hash whitelist
 # 03.11.2021 - Updated to Python3
-#
+# 15.04.2022 - Adding Tqdm
 
 from OTXv2 import OTXv2
 import re
