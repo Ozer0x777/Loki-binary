@@ -2,9 +2,54 @@
 
 Loki is a simple IOC scanner that scans files and directories for indicators of compromise (IOCs). It is designed to be fast and efficient and can be used as a standalone tool or as part of a larger security toolkit.
 
+## Usage
 
+To use Loki, simply run the loki command followed by the path to the file or directory to be scanned:
 
+    loki /path/to/file_or_directory
 
+By default, Loki will scan the specified file or directory recursively. If you want to scan only the top-level directory, you can use the -n or --no-recursive option.
+
+Loki also supports specifying a signature file that defines the IOCs to be searched for. To use a signature file, use the -s or --signature option followed by the path to the signature file:
+
+    loki /path/to/file_or_directory -s /path/to/signature_file.yml
+
+The signature file is a YAML file that defines the IOCs to be searched for. The file consists of a list of rules, each of which defines a single IOC. The following rule types are currently supported:
+
+   FileHash: Searches for files with a specific hash value.
+   FilePath: Searches for files with a specific file path.
+   YaraRule: Searches for files that match a Yara rule.
+
+Here is an example signature file:
+
+    title: Sample signature file
+    description: Example of a signature file
+    author: John Doe
+    date: 2022-04-18
+
+    rules:
+      - title: Example rule 1
+        description: This rule searches for files with a specific SHA256 hash value.
+        type: FileHash
+        hash: 3aa0c7f91887e9caae0a2fb01d1e71c1f0e381d24c247a82b81c91990f82b9e7
+
+      - title: Example rule 2
+        description: This rule searches for files in a specific directory.
+        type: FilePath
+        path: /opt/malware
+
+      - title: Example rule 3
+        description: This rule searches for files that match a Yara rule.
+        type: YaraRule
+        rule: |
+          rule ExampleRule {
+              strings:
+                  $s1 = "malware.exe"
+              condition:
+                  $s1
+          }
+
+Loki produces both human-readable and machine-readable output. The human-readable output is written to the console or to a log file, depending on the options specified. The machine-readable output is written to a JSON or CSV file.
 
 ## Get_OTX_Iocs 
 
