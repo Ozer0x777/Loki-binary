@@ -6,13 +6,13 @@ Loki is a simple IOC scanner that scans files and directories for indicators of 
 
 To use Loki, simply run the loki command followed by the path to the file or directory to be scanned:
 
-    loki /path/to/file_or_directory
+    loki.exe /path/to/file_or_directory
 
 By default, Loki will scan the specified file or directory recursively. If you want to scan only the top-level directory, you can use the -n or --no-recursive option.
 
 Loki also supports specifying a signature file that defines the IOCs to be searched for. To use a signature file, use the -s or --signature option followed by the path to the signature file:
 
-    loki /path/to/file_or_directory -s /path/to/signature_file.yml
+    loki.exe /path/to/file_or_directory -s /path/to/signature_file.yml
 
 The signature file is a YAML file that defines the IOCs to be searched for. The file consists of a list of rules, each of which defines a single IOC. The following rule types are currently supported:
 
