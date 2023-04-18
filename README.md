@@ -1,4 +1,6 @@
+# Loki
 
+Loki is a simple IOC scanner that scans files and directories for indicators of compromise (IOCs). It is designed to be fast and efficient and can be used as a standalone tool or as part of a larger security toolkit.
 
 
 
