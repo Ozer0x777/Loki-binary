@@ -51,6 +51,8 @@ Here is an example signature file:
 
 Loki produces both human-readable and machine-readable output. The human-readable output is written to the console or to a log file, depending on the options specified. The machine-readable output is written to a JSON or CSV file.
 
+
+
 ## Get_OTX_Iocs 
 
 This script allows you to fetch Indicators of Compromise (IOCs) from the Open Threat Exchange (OTX) by AlienVault API and generate a report in JSON or CSV format. IOCs can be used to detect potential malicious activity in your network or systems.
